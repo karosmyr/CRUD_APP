@@ -1,0 +1,62 @@
+@import '../../colors';
+
+.user {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid $darkgold;
+
+	&__btnContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		&--button {
+			cursor: pointer;
+			padding: 0.25rem 1rem;
+			border: 1px solid $darkgold;
+			border-radius: 12px;
+			background-color: $gold;
+			font-size: 0.7rem;
+			font-weight: bold;
+
+			&:hover,
+			&:active {
+				background-color: $darkgold;
+				border: 1px solid $dark;
+			}
+		}
+	}
+
+	&__detail {
+		font-size: 0.9rem;
+		margin: 0.2rem 0.5rem;
+
+		&--bold {
+			font-weight: bold;
+		}
+	}
+}
+
+// ===================================
+// MEDIA
+// ===================================
+
+@media (min-width: 576px) {
+	.user {
+		padding: 1rem;
+
+
+		&__btnContainer {
+			&--button {
+				font-size: 1rem;
+				padding: 0.5rem 2rem;
+			}
+		}
+
+		&__detail {
+			font-size: 1.1rem;
+			margin: 0.5rem 1rem;
+		}
+	}
+}

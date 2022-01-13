@@ -1,0 +1,119 @@
+@import '../../colors';
+
+.list {
+	list-style: none;
+}
+
+.editedUser {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	column-gap: 1rem;
+	flex-wrap: wrap;
+	border-bottom: 1px solid $darkgold;
+	padding: 0.5rem 0;
+	
+	&__actions {
+		text-align: center;
+		margin-bottom: 0.5rem;
+
+		&--button {
+			cursor: pointer;
+			width: 7.5rem;
+			padding: 0.5rem 0;
+			border: 1px solid $darkgold;
+			border-radius: 12px;
+			margin: 0.3rem;
+			background-color: $gold;
+			font-size: 0.7rem;
+			font-weight: bold;
+
+			&:hover,
+			&:active {
+				background-color: $darkgold;
+				border: 1px solid $dark;
+			}
+
+			&:disabled,
+			&:disabled:hover,
+			&:disabled:active {
+				background-color: #aaa;
+				color: #292929;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	&__detail {
+
+		&--bold {
+			font-weight: bold;
+		}
+	}
+}
+
+.error-text {
+	margin-top: 0.3rem;
+	color: #b40e0e;
+}
+
+
+.control {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	column-gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.control .editedUser__detail {
+	min-width: 10rem;
+}
+
+
+.editedUser__detail {
+	margin-bottom: 1rem;
+}
+
+.editedUser__detail input,
+.editedUser__detail label {
+	display: block;
+}
+
+.editedUser__detail label {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.editedUser__detail input,
+.editedUser__detail select {
+	font: inherit;
+	padding: 0.5rem;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	width: 17rem;
+	max-width: 100%;
+}
+
+.editedUser__detail input:focus {
+	outline: none;
+	border-color: #240370;
+	background-color: #e0d4fd;
+}
+
+// ===================================
+// MEDIA
+// ===================================
+
+@media (min-width: 576px) {
+	.editedUser {
+		padding: 1rem;
+		
+		&__actions {
+			&--button {
+				font-size: 1rem;
+				padding: 0.5rem 2rem;
+			}
+		}
+	}
+}
